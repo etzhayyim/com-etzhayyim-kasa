@@ -19,7 +19,7 @@
   House style: Python ':…' keyword strings stay strings; pure fns; file I/O only at #?(:clj) edges.
   Python dict order = insertion order — preserved here by ordered accumulation + the same stable
   sorts. round()/{:g}/{:,.0f}/{:.1e}/{:+.1f} formatting is reproduced byte-for-byte."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kasa.methods.kasa-edn :as kasa-edn]))
 
 ;; ── Python-faithful numeric formatting ──────────────────────────────────────

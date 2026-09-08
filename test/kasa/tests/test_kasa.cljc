@@ -8,7 +8,7 @@
   intentionally DEFERRED here, mirroring the inochi precedent of omitting sibling-module tests."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kasa.methods.kasa-edn :as kasa-edn]
             [kasa.methods.sources :as sources]
             [kasa.methods.analyze :as analyze]))

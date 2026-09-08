@@ -12,7 +12,7 @@
   House style: Python ':…' keyword strings stay strings; pure fns; file I/O only at the
   #?(:clj) edge. Maps preserve insertion order (array-map ≤8 keys; ordered-map otherwise)
   so byte-parity with Python dict order is exact."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── reader (port of the _R char-cursor parser) ──────────────────────────────
 ;; The Python _R walks character-by-character. We mirror that exactly with a mutable
