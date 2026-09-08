@@ -7,7 +7,7 @@
   every derived number is flagged :synthesized. ADR-2606072000."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.set]
             [kasa.methods.kasa-edn :as kasa-edn]
             [kasa.methods.sources :as sources]
@@ -26,17 +26,17 @@
 
 (deftest test-report-is-non-adjudicating-no-forecast
   (let [{:keys [md]} (report*)]
-    (is (str/includes? (str/lower-case md) "non-adjudicating"))
-    (is (str/includes? (str/lower-case md) "no forecast"))))
+    (is (str/includes? (str/lower md) "non-adjudicating"))
+    (is (str/includes? (str/lower md) "no forecast"))))
 
 (deftest test-report-states-no-forecast-no-targeting
   ;; G4/G9: must EXPLICITLY disclaim forecasting + targeting, and must not leak an adjudication artifact.
   (let [{:keys [md]} (report*)
-        lc (str/lower-case md)]
+        lc (str/lower md)]
     (is (str/includes? lc "does not forecast"))
     (is (str/includes? lc "targeting list"))
     (doseq [verdict ["目標株価" "buy/sell" "export-control list:" "target list:"]]
-      (is (not (str/includes? lc (str/lower-case verdict)))
+      (is (not (str/includes? lc (str/lower verdict)))
           (str "adjudication/targeting artifact leaked: " (pr-str verdict))))))
 
 (deftest test-every-seed-obs-sourcing-is-valid-and-honest

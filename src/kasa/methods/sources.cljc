@@ -10,7 +10,7 @@
                  compilation is not. Read the press release, never the terminal.
 
   Used by ingest (admissible? gate) + the invariant tests. ADR-2606072000."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; publisher -> [default-license default-access note]. The ADMISSIBLE public sources.
 (def admissible-sources

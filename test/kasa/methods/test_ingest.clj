@@ -13,7 +13,7 @@
   (:require [kasa.methods.ingest :as ing]
             [kasa.methods.kasa-edn :as ke]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (defn- actor-root [] (io/file (or (System/getProperty "user.dir") ".")))

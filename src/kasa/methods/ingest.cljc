@@ -21,7 +21,7 @@
   House style: Python ':…' keyword strings stay strings; pure fns; file/network I/O only at the
   #?(:clj) edges. JSON ingest files are read with a self-contained reader (no third-party dep);
   the seed/output is read/written via the kasa EDN reader sibling."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kasa.methods.kasa-edn :as kasa-edn]
             [kasa.methods.sources :as sources]
             [kasa.methods.analyze :as analyze]))
