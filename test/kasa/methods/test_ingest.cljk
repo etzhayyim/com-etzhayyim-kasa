@@ -9,7 +9,7 @@
   refuse), rows_to_obs shape + G1 admissibility, and parity with the seed (71 rows when
   0 ingest rows are provided — the same figure produced by python3 ingest.py).
 
-  Run:  bb --classpath src:test test/kasa/methods/test_ingest.clj"
+  Run:  bb --classpath src:test test/kasa/methods/test_ingest.cljk"
   (:require [kasa.methods.ingest :as ing]
             [kasa.methods.kasa-edn :as ke]
             [clojure.java.io :as io]
